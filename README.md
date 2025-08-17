@@ -65,15 +65,28 @@ A Java-based web application developed in Eclipse IDE that allows restaurants to
 ---
 
 ###  Cart
+
 - **POST** `/cart` → Add item to cart  
+  ![Add to Cart](./screenshots/POST_CART.png)
+
 - **GET** `/cart/{userId}` → Get all cart items for a user  
+  ![Get Cart Items](./screenshots/GET_CART_ID.png)
+
 - **GET** `/cart/details/{userId}` → Get cart details (with menu item info)  
+  ![Cart Details](./screenshots/GET_CART_DETAILS.png)
+
 - **DELETE** `/cart/{id}` → Delete a cart item by id  
+  ![Delete Cart Item](./screenshots/DELETE_CART_ID.png)
+
 - **DELETE** `/cart/clear/{userId}` → Clear all cart items for a user  
+  
+
 - **POST** `/cart/checkout` → Checkout and place an order  
    - Params: `userId`, `paymentMode`, `deliveryAddress`  
+   ![Checkout](./screenshots/POST_CART_CHECKOUT.png)
 
 ---
+
 
 ###  Menu
 - **POST** `/menu` → Add new menu item *(Admin only)*  
