@@ -106,12 +106,20 @@ A Java-based web application developed in Eclipse IDE that allows restaurants to
   ![Get Menu Item By Id](./screenshots/GET_MENU_ID.png)
 ---
 
-###  Orders
+### 📦 Orders
+
 - **POST** `/orders/place` → Place a new order  
-   - Params: `userId`, `paymentMode`, `deliveryAddress`  
+  Params: userId, paymentMode, deliveryAddress  
+  ![Place Order](./screenshots/POST_ORDERS_PLACE.png)
+
 - **GET** `/orders/user/{userId}` → Get all orders for a user  
+  ![Get User Orders](./screenshots/GET_ORDERS_USER.png)
+
 - **GET** `/orders/{orderId}` → Get details of a specific order  
+  ![Get Order Details](./screenshots/GET_ORDERID.png)
+
 - **PUT** `/orders/{id}/status?status=DELIVERED` → Update order status  
+  ![Update Order Status](./screenshots/PUT_ORDER_STATUS.png)
 
 ---
 
