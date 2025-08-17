@@ -78,7 +78,7 @@ A Java-based web application developed in Eclipse IDE that allows restaurants to
   ![Delete Cart Item](./screenshots/DELETE_CART_ID.png)
 
 - **DELETE** `/cart/clear/{userId}` → Clear all cart items for a user  
-  ![Clear Cart](./screenshots/DELETE_CART_CLEAR.png)
+  
 
 - **POST** `/cart/checkout` → Checkout and place an order  
   Params: `userId`, `paymentMode`, `deliveryAddress`  
