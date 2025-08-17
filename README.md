@@ -89,12 +89,21 @@ A Java-based web application developed in Eclipse IDE that allows restaurants to
 
 
 ###  Menu
-- **POST** `/menu` → Add new menu item *(Admin only)*  
-- **PUT** `/menu/{id}` → Update a menu item *(Admin only)*  
-- **DELETE** `/menu/{id}` → Delete a menu item *(Admin only)*  
-- **GET** `/menu` → Fetch all menu items  
-- **GET** `/menu/{id}` → Fetch single menu item by id  
 
+- **POST** `/menu` → Add new menu item *(Admin only)*  
+  ![Add Menu Item](./screenshots/POST_MENU.png)
+
+- **PUT** `/menu/{id}` → Update a menu item *(Admin only)*  
+  ![Update Menu Item](./screenshots/PUT_MENU.png)
+
+- **DELETE** `/menu/{id}` → Delete a menu item *(Admin only)*  
+  ![Delete Menu Item](./screenshots/DELETE_MENU.png)
+
+- **GET** `/menu` → Fetch all menu items  
+  ![Get All Menu Items](./screenshots/GET_MENU.png)
+
+- **GET** `/menu/{id}` → Fetch single menu item by id  
+  ![Get Menu Item By Id](./screenshots/GET_MENU_ID.png)
 ---
 
 ###  Orders
