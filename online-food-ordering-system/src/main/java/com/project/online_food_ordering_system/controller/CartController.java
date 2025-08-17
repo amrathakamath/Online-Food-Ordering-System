@@ -2,6 +2,7 @@ package com.project.online_food_ordering_system.controller;
 
 import com.project.online_food_ordering_system.dto.CartItemDTO;
 import com.project.online_food_ordering_system.entity.Cart;
+import com.project.online_food_ordering_system.entity.MenuItem;
 import com.project.online_food_ordering_system.entity.Order;
 import com.project.online_food_ordering_system.service.CartService;
 import com.project.online_food_ordering_system.service.OrderService;
@@ -27,11 +28,22 @@ public class CartController {
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private com.project.online_food_ordering_system.repository.MenuItemRepository menuItemRepository;
+
     @PostMapping
     public Cart addCartItem(@RequestBody Cart cart) {
         logger.info("Adding item to cart for userId: {}", cart.getUserId());
+
+        if (cart.getMenuItem() == null && cart.getMenuId() != null) {
+            MenuItem menuItem = menuItemRepository.findById(cart.getMenuId())
+                    .orElseThrow(() -> new RuntimeException("Menu not found with id: " + cart.getMenuId()));
+            cart.setMenuItem(menuItem);
+        }
+
         return cartService.addToCart(cart);
     }
+
 
     @GetMapping("/{userId}")
     public List<Cart> getCartItems(@PathVariable Long userId) {

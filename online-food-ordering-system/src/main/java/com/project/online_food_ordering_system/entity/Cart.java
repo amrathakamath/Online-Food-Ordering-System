@@ -18,7 +18,17 @@ public class Cart {
     private MenuItem menuItem;
 
     private int quantity;
-    
+    @Transient
+    private Long menuId;   
+
+    public Long getMenuId() {
+        return menuId;
+    }
+
+    public void setMenuId(Long menuId) {
+        this.menuId = menuId;
+    }
+
 
     public Cart() {}
 
